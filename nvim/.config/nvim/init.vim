@@ -10,6 +10,7 @@ Plug 'LukeSmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 set bg=light
@@ -213,4 +214,6 @@ set clipboard=unnamedplus
 """.xml
 	autocmd FileType xml inoremap ,e <item><Enter><title><++></title><Enter><guid<space>isPermaLink="false"><++></guid><Enter><pubDate><Esc>:put<Space>=strftime('%a, %d %b %Y %H:%M:%S %z')<Enter>kJA</pubDate><Enter><link><++></link><Enter><description><![CDATA[<++>]]></description><Enter></item><Esc>?<title><enter>cit
 	autocmd FileType xml inoremap ,a <a href="<++>"><++></a><++><Esc>F"ci"
-
+"Easy align plugin
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
