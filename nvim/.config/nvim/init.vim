@@ -40,6 +40,11 @@ set clipboard=unnamedplus
 " Nerd tree
 	map <C-n> :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Move cursor by visual screen lines
+nnoremap j gj
+nnoremap k gk
+xnoremap j gj
+xnoremap k gk
 
 " vimling:
 	nm <leader>d :call ToggleDeadKeys()<CR>
